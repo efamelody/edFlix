@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<style>
+.mod2 {
+  background-color: lightgrey;
+  text-align: center;
+  margin-top: 20px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  height: auto;
+  width: 25%;
+}
+
+.mod2 h1{
+  font-size: 17px;
+}
+.mod2 h2{
+  font-size: 15px;
+}
+.mod2 h3{
+  font-size: 15px;
+}
+</style>
+<html>
+<head>
+  <title>EdFlix</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+</head>
+  <%= erb :"common/header" %>
+  <main>
+  <div class= "modules">
+  <div class= "mod1">
+    <h2> Introduction to Computer Science</h2>
+    <h3> Course Description:</h3>
+    <p> This course is designed for beginners who want to learn the fundamentals of computer science. 
+    The course provides a comprehensive introduction to the basic concepts and principles of computer science. 
+    The course will cover topics such as programming languages, algorithms, data structures, computer organization, 
+    and operating systems.
+    The course will start with an overview of the history of computing and the evolution of computers, 
+    including hardware and software components. Students will learn about different programming paradigms and languages, 
+    including Python, Java, and C++. They will also learn about the basics of algorithms and data structures, 
+    including sorting and searching algorithms, linked lists, stacks, and queues.
+    The course will also cover computer organization, including hardware components such as processors, 
+    memory, and input/output devices. Students will learn about operating systems and how they manage resources, 
+    such as memory and processing power.
+    Throughout the course, students will have the opportunity to develop their programming skills by writing code and 
+    working on programming projects. By the end of the course, students will have a solid foundation in computer science 
+    and be able to apply their knowledge to real-world problems.</p>
+    <h3> Year Group:</h3>
+    <p> This course is meant for First Year Computer Science Students</p>
+    <p> This course is available for free</p>
+    <a href="/learner-form"><button> ENROLL </button></a>
+      <div class = mod2>
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 1 </h3>
+  <% if @comment_1.count > 0 %>
+    <% @comment_1.each do |comments| %>
+      <h2>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div> 
+  </div>
+
+
+  <div class= "mod1">
+    <h2> C++ Programming</h2>
+    <h3> Course Description</h3>
+    <p> This intermediate course is designed for those who have a good understanding of C++ programming and are looking to 
+    further their skills in the language. Students will delve deeper into C++ concepts and learn advanced topics such as pointers, 
+    memory management, data structures, and algorithms.
+    The course will focus on teaching students how to write efficient and effective code that can be used to
+    create more complex and feature-rich applications. Students will also learn about object-oriented programming (OOP) 
+    and how to use it to create reusable code.
+    Throughout the course, students will work on several programming projects that will 
+    reinforce the concepts they have learned. By the end of the course, students will have a strong foundation 
+    in C++ programming and will be able to write complex programs using the language's advanced features.</p>
+    <h3> Year Group:</h3>
+    <p> This course is meant for First Year Computer Science Students</p>
+    <p> This course is available for free</p>
+    <a href="/learner-form"><button> ENROLL </button></a>
+    <div class = "mod2">
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 2 </h3>
+  <% if @comment_2.count > 0 %>
+    <% @comment_2.each do |comments| %>
+      <h1>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div> 
+  </div>
+
+  <div class= "mod1">
+    <h2> Mastering Python Programming</h2>
+    <h3> Course Description</h3>
+    <p> The Mastering Python Programming course is designed to help you become a proficient Python developer,
+    regardless of your current skill level. This course will provide you with a deep understanding of Python, 
+    its syntax, and its application in real-world scenarios. You will learn how to write efficient and effective Python code, 
+    how to debug and optimize your code, and how to use Python libraries to automate tasks and build powerful applications.
+    The course is suitable for beginners who are new to programming, as well as experienced developers who want to advance their 
+    skills in Python. You will start by learning the fundamentals of Python programming, including data types, control flow, 
+    functions, and modules. From there, you will progress to more advanced topics such as object-oriented programming, 
+    algorithms and data structures, file handling, and web scraping.
+    Throughout the course, you will work on a range of practical projects that will allow you to apply your skills 
+    in real-world scenarios. These projects will cover a variety of topics, including data analysis, machine learning, 
+    web development, and more.
+    By the end of the Mastering Python Programming course, you will have the skills and knowledge to tackle any Python 
+    project with confidence. You will also have a strong foundation for further study in Python and related technologies.</p>
+    <h3> Year Group:</h3>
+    <p> This course is meant for Second Year Computer Science Students</p>
+    <p> This course is a PAID course</p>
+    <a href="/learner-form"><button> ENROLL </button></a>
+    <div class = "mod2">
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 3 </h3>
+  <% if @comment_3.count > 0 %>
+    <% @comment_3.each do |comments| %>
+      <h1>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div> 
+  </div>
+
+  </div>
+   <%= erb :footer %>
+  </main>
+  </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<style>
+.mod2 {
+  background-color: lightgrey;
+  text-align: center;
+  margin-top: 20px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  height: auto;
+  width: 25%;
+}
+
+.mod2 h1{
+  font-size: 17px;
+}
+.mod2 h2{
+  font-size: 15px;
+}
+.mod2 h3{
+  font-size: 15px;
+}
+</style>
+<html>
+<head>
+  <title>EdFlix</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+</head>
+  <%= erb :"common/header" %>
+  <main>
+  <div class= "modules">
+  <div class= "mod1">
+    <h2>Course Name: Cancer Biology</h2>
+    <h3> Course Description:</h3>
+    <p> Cancer is one of the leading causes of death worldwide. Understanding the biology of cancer is crucial to 
+    develop new therapies and treatments to fight this disease. This course will cover the fundamentals of cancer biology, 
+    including the mechanisms underlying cancer initiation, progression, and metastasis.
+    The course will start with a brief overview of normal cell biology and how it is perturbed in cancer cells. 
+    We will discuss the molecular basis of cancer, including genetic mutations and alterations in signal transduction pathways. 
+    Students will learn about the different types of cancers, their clinical presentation, and the current therapeutic options 
+    available.
+    We will also cover the role of the tumor microenvironment in promoting cancer progression and how cancer 
+    cells interact with their surroundings. The course will delve into the complex mechanisms of cancer metastasis, 
+    including the biology of cancer stem cells, the epithelial-mesenchymal transition, and the importance of the immune system 
+    in cancer surveillance.</p>
+    <h3> Year Group:</h3>
+    <p> This course is meant for First Year Students</p>
+    <p> This course is available for free</p>
+    <a href="/learner-form"><button> ENROLL </button></a>
+    <div class = "mod2">
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 6 </h3>
+  <% if @comment_6.count > 0 %>
+    <% @comment_6.each do |comments| %>
+      <h1>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div> 
+  </div>
+
+  <div class= "mod1">
+    <h2>Course Name: Bioenergetics: Understanding Energy Flow in Living Systems </h2>
+    <h3> Course Description</h3>
+    <p> Bioenergetics is the study of the flow of energy in living systems. This course provides an in-depth understanding 
+        of the principles of energy flow in living organisms, from the molecular level to the ecosystem level.
+        Throughout the course, students will explore the different pathways of energy flow and transformation, 
+        including photosynthesis, respiration, and fermentation. They will learn how enzymes and metabolic pathways regulate and control these processes to maintain the balance of energy within the cell.
+        The course will cover the fundamental concepts of thermodynamics, including the laws of energy conservation and entropy. 
+        Students will learn how these principles apply to living systems and how energy is transferred between different forms, 
+        such as chemical, electrical, and thermal.
+        The course will also delve into the various methods of energy production, including ATP synthesis, 
+        oxidative phosphorylation, and electron transport chains. Students will gain a deep understanding of the molecular 
+        mechanisms involved in these processes and how they are regulated to meet the energy demands of the organism.</p>
+    <h3> Year Group:</h3>
+    <p> This course is meant for Second Year Students</p>
+    <p> This course is available for free</p>
+    <a href="/LearnerForm"><button> ENROLL </button></a>
+  <div class = "mod2">
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 7 </h3>
+  <% if @comment_7.count > 0 %>
+    <% @comment_7.each do |comments| %>
+      <h1>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div> 
+</div>
+  <div class= "mod1">
+    <h2>Course Name: Neuro-Oncology: Understanding Brain Tumors and Treatment Options</h2>
+    <h3> Course Description</h3>
+    <p> This course provides a comprehensive overview of the field of neuro-oncology, including the biology of brain tumors, 
+        the clinical presentation of brain tumors, and the various treatment options available for patients. Students will 
+        learn about the different types of brain tumors, their molecular basis, and how they are classified. The course will cover 
+        the clinical manifestations of brain tumors, including neurological symptoms, cognitive deficits, and quality of life issues.
+        In addition to learning about the biology and clinical presentation of brain tumors, students will explore the different 
+        treatment options available for patients with brain tumors. This will include surgery, radiation therapy, chemotherapy, 
+        targeted therapy, and immunotherapy. The course will delve into the potential benefits and risks associated with each 
+        treatment modality and how they are used in various contexts, such as primary and metastatic brain tumors.
+        Throughout the course, students will engage with real-world cases and cutting-edge research, giving them a deeper 
+        understanding of the challenges faced by neuro-oncologists and the latest advances in the field. Students will also 
+        learn about the multidisciplinary approach to patient care in neuro-oncology, including the role of neurosurgeons, 
+        medical oncologists, radiation oncologists, and supportive care providers.</p>
+    <h3> Year Group:</h3>
+    <p> This course is meant for Third Year Students</p>
+    <p> This course is a PAID course</p>
+    <a href="/LearnerForm"><button> ENROLL </button></a>
+    <div class = "mod2">
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 8 </h3>
+  <% if @comment_8.count > 0 %>
+    <% @comment_8.each do |comments| %>
+      <h1>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div> 
+  </div>
+  </div>
+   <%= erb :footer %>
+  </main>
+  </html>

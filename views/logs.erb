@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EdFlix</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+</head>
+<style>
+#box{
+  background: #3399ff;
+  padding: 20px;
+}
+
+#box li{
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+</style>
+<body>
+  <main>
+  <%= erb :"common/header" %>
+<body>
+<h1>Application Logs</h1>
+
+<ul id ="box">
+  <% @logs.each do |log| %>
+    <li><%= log %></li>
+  <% end %>
+</ul>
+
+</body>
+ <%= erb :footer %>
+</html>

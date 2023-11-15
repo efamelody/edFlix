@@ -1,0 +1,42 @@
+<% @subtitle = "Search" %>
+<%= erb :"common/header" %>
+
+<div class="navigation">
+  <form>
+    <p>Enter your current degree: <input type="text" name="current_degree" value="<%= h @current_degree %>"/>
+    <br/>
+    What are your interest?: <input type="text" name="interest" value="<%= h @interest %>"/>
+    <input type="submit" value="Submit" /></p>
+  </form>
+</div>
+
+<br />
+
+<% if @courses.count > 0 %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>description</th>
+      <th>Year group</th>
+      <th>Degree</th>
+      <th>Paid</th>
+      <th>Certificate</th>
+      <th>Interest</th>
+    </tr>
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= h course.name %></td>
+      <td><%= h course.description %></td>
+      <td><%= h course.yeargroup %></td>
+      <td><%= h course.degree %></td>
+      <td><%= h course.paid %></td>
+      <td><%= h course.certificate %></td>
+      <td><%= h course.interest %></td>
+
+
+    </tr>
+  <% end %> 
+  </table>
+<% else %>
+  <p>You have no recommendations</p>
+<% end %>

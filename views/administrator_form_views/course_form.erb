@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="style/style.css" type="text/css">
+
+<p class="label">ID</p>
+<p class="field"><input type="text" name="id" value="<%= h @course.id %>" /></p>
+<% if @course.errors.include?("id") %>
+    <% puts "ID error" %>
+    <% @course.errors["id"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Course Name</p>
+<p class="field"><input type="text" name="name" value="<%= h @course.name %>" /></p>
+<% if @course.errors.include?("name") %>
+    <% puts "Name error" %>
+  <% @course.errors["name"].each do |error| %>
+  <% end %>
+<% end %>
+
+
+<p class="label">Description</p>
+<p class="field"><input type="text" name="description" value="<%= h @course.description %>" /></p>
+<% if @course.errors.include?("description") %>
+    <% puts "Description error" %>
+  <% @course.errors["description"].each do |error| %>
+  <% end %>
+<% end %>
+
+
+<p class="label">Year Group</p>
+<p class="field"><input type="text" name="yeargroup" value="<%= h @course.yeargroup %>" /></p>
+<% if @course.errors.include?("yeargroup") %>
+    <% puts "Year error" %>
+  <% @course.errors["yeargroup"].each do |error| %>
+  <% end %>
+<% end %>
+
+
+<p class="label">Degree</p>
+<p class="field"><input type="text" name="degree" value="<%= h @course.degree %>" /></p>
+<% if @course.errors.include?("degree") %>
+    <% puts "Degree error" %>
+  <% @course.errors["degree"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Paid</p>
+<p class="field"><input type="text" name="paid" value="<%= h @course.paid %>" /></p>
+<% if @course.errors.include?("paid") %>
+    <% puts "Paid error" %>
+  <% @course.errors["paid"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Paid Certificate</p>
+<p class="field"><input type="text" name="certificate" value="<%= h @course.certificate %>" /></p>
+<% if @course.errors.include?("certificate") %>
+    <% puts "Certificate error" %>
+  <% @course.errors["certificate"].each do |error| %>
+  <% end %>
+<% end %>
+
+<% puts @course.errors %>
+
+<p class="submit"><input type="submit" value="Submit" /></p>

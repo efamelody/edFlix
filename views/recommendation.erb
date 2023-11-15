@@ -1,0 +1,50 @@
+<head>
+    <title>Recommendations</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+  </head>
+
+<% @subtitle = "Search" %>
+<%= erb :"common/header" %>
+
+<h1>Find Your Recommendations </h1>
+
+<div class="contact-container">
+  <form>
+    Degree Options
+    <li>Maths</li>
+    <li> Computer Science</li>
+    <li> Biology </li>
+    <p>Enter your current degree: <input type="text" name="current_degree" value="<%= h @current_degree %>"/>
+    <br/>
+    What are your interest?: 
+    <li> Applying Knowledge</li>
+    <li> Critical Thinking </li>
+    <li> Personal Devolepment </li>
+    <input type="text" name="interest" value="<%= h @interest %>"/>
+    <input type="submit" value="Submit" /></p>
+  </form>
+</div>
+
+<br />
+
+<p class = "recommendation">
+<% if @courses.count > 0 %>
+
+  <% @courses.each do |course| %>
+    
+      <h1><%= h course.name %></h1>
+      <h3>Description :<%= h course.description %></h3>
+      <h3>Year Group: <%= h course.yeargroup %></h3>
+      <h3>Degree: <%= h course.degree %></h3>
+      <h3>Payment: <%= h course.paid %></h3>
+      <h3>Certificate: <%= h course.certificate %></h3>
+      <h3>Interest: <%= h course.interest %></h3>
+      <a href="/learner-form"><button> ENROLL IN THIS COURSE NOW </button></a>
+    
+  <% end %> 
+  
+<% else %>
+  <p>You have no recommendations</p>
+  <%= erb :"footer" %>
+<% end %>
+</p>

@@ -1,0 +1,49 @@
+<% @subtitle = "Search" %>
+ <%= erb :"common/header" %>
+<link rel="stylesheet" href="style/style.css" type="text/css">
+<div class="navigation">
+  <form>
+    <p class="title">Enter a course name to show only students for that course: </p>
+    <input type="text" name="course_search" value="<%= h @course_search %>"/>
+    <input type="submit" value="Submit" /></p>
+    
+  </form>
+
+  <button type="button" id="add_button" onclick="window.location.href='/add';">Add a new student to the database</button>
+</div>
+
+<br />
+
+<% if @users.count > 0 %>
+  <table class="search_table">
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Full Name</th>
+      <th>Role</th>
+      <th>Degree</th>
+      <th>Institution Code</th>
+      <th>Suspended</th>
+      <th>Reason</th>
+    </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= h user.id %></td>
+      <td><%= h user.username %></td>
+      <td><%= h user.fullName %></td>
+      <td><%= h user.role %></td>
+      <td><%= h user.degree %></td>
+      <td><%= h user.institutionCode %></td>
+      <td><%= h user.suspended %></td>
+      <td><%= h user.reason %></td>
+      <td><a href="/edit?id=<%= h user.id %>">Edit</a></td>
+      
+
+    </tr>
+  <% end %> 
+  </table>
+<% else %>
+  <p>Your search revealed no students.</p>
+<% end %>
+
+<%= erb :footer %>

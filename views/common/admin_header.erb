@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <header>
+  <h1>EdFlix</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/recommendation">Recommendations</a></li>
+        <li><a href="/search">Search</a></li>
+        <li><a href="/course_search">Add Course</a></li>
+        <li><a href="/logs">User Logs</a></li>
+        <% if session[:username] %>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dropdown-content">
+              <a href="/signup">Create Account</a>
+              <a href="/logout">Logout</a>
+        <% else %>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dropdown-content">
+              <a href="/signup">Create Account</a>
+              <a href="/account">Login</a>   
+        <% end %>
+      </ul>
+    </nav>
+    </div>
+  </header>
+ </head>
+ </html>  

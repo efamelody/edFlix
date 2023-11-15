@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EdFlix</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <% if session[:username] %>
+          <li><a href="/logout">Logout</a></li>
+        <% else %>
+          <li><a href="/login">Login</a></li>
+        <% end %>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

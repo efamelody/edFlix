@@ -1,0 +1,73 @@
+<% @subtitle = "Search" %>
+<link rel="stylesheet" href="style/style.css" type="text/css">
+
+<header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/recommendation">Recommendations</a></li>
+        <% if session[:username] %>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dropdown-content">
+              <a href="/signup">Create Account</a>
+              <a href="/logout">Logout</a>
+        <% else %>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dropdown-content">
+              <a href="/signup">Create Account</a>
+              <a href="/account">Login</a>   
+        <% end %>
+      </ul>
+    </nav>
+    <form action="/searchResults" method="get">
+        <input type="text" name="query" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+  </header>
+  
+<div class="navigation">
+  <form>
+    <p class="title">Search for a course: </p>
+    <input type="text" name="course" value="<%= h @course %>"/>
+    <input type="submit" value="Submit" /></p>
+  </form>
+
+  <button type="button" id="add_button" onclick="window.location.href='/add_course';">Add a new course to the database</button>
+</div>
+
+<br />
+
+<% if @course_result.count > 0 %>
+  <table class="course_table">
+    <tr>
+      <th>ID</th>
+      <th>Course Name</th>
+      <th>Description</th>
+      <th>Year Group</th>
+      <th>Degree</th>
+      <th>Paid</th>
+      <th>Certificate</th>
+    </tr>
+  <% @course_result.each do |course| %>
+    <tr>
+      <td><%= h course.id %></td>
+      <td><%= h course.name %></td>
+      <td><%= h course.description %></td>
+      <td><%= h course.yeargroup %></td>
+      <td><%= h course.degree %></td>
+      <td><%= h course.paid %></td>
+      <td><%= h course.certificate %></td>
+      <td><a href="/edit?id=<%= h course.id %>">Edit</a></td>
+    </tr>
+  <% end %> 
+  </table>
+<% else %>
+  <p>Your search revealed no courses.</p>
+<% end %>
+
+<%= erb :footer %>

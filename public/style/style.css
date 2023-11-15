@@ -1,0 +1,393 @@
+project/public/style/style.css
+/* Css for the featured programs*/
+{
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: #BADFF3;
+}
+
+.column {
+  float: right;
+  width: 33.33%;
+  height: 500px; 
+text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navigation menu */
+ header{
+  background-color: #16168d;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.651);
+}
+header ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+header ul li{
+  font-size: 20px;
+  list-style: none;
+}
+
+header ul li a{
+  text-decoration: none;
+  padding: 6px 15px;
+  color:white;
+  border-radius: 20px;
+}
+
+header ul li a:hover{
+  background:purple ;
+  color:white;
+  font-size: 23px;
+  transition: 0.5s ease;
+}
+
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.555);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*style the home page*/
+section ul li a {
+  color: black;
+}
+
+/*recommendation page style */
+.navigation form {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.recommendation {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 1px;
+}
+
+
+
+
+
+
+/*footer style*/
+
+
+
+
+/*contact page styling*/
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.contact-container form {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.contact-container, label {
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.contact-info {
+  margin-top: 40px;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li:before {
+  color: #16168d;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.contact-info, p {
+  margin-bottom: 20px;
+}
+/* CSS for moderator search form */
+/* Navigation bar */
+.navigation {
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation form {
+  display: flex;
+  align-items: center;
+}
+
+.navigation form input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.navigation form input[type="submit"] {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1E90FF;
+  color: white;
+  cursor: pointer;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #lightskyblue;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Table */
+.search_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.search_table th, .search_table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.search_table th {
+  background-color: #1E90FF;
+  color: white;
+}
+
+.search_table tr:hover {
+  background-color: #f5f5f5;
+}
+
+#add_button{
+  background-color: #1E90FF;
+  color: white;
+}
+
+/* User form */
+/* Label */
+.label {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+/* Input Field */
+.field input[type="text"] {
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 30%;
+box-sizing: border-box;
+}
+
+/* Submit Button */
+.submit input[type="submit"] {
+background-color: #1E90FF;
+color: white;
+padding: 8px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 20px;
+}
+
+/* Error Message */
+.field .error {
+color: red;
+font-size: 12px;
+margin-top: 5px;
+}
+
+/* Container */
+.container {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+}
+
+/* Form Label and Field */
+.form-row {
+margin-bottom: 10px;
+}
+
+<<<<<<< HEAD
+=======
+.form-row .label {
+display: block;
+}
+
+.form-row .field {
+display: block;
+}
+
+/* Form Submit Button */
+.form-submit {
+text-align: right;
+}
+
+.form-submit input[type="submit"] {
+margin-top: 20px;
+}
+
+/* Form Error Message */
+.form-row .error {
+color: red;
+font-size: 12px;
+margin-top: 5px;
+}
+
+/* Form Success Message */
+.success {
+color: green;
+font-size: 16px;
+margin-top: 20px;
+}
+
+.mod1 {
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  margin: 40px;
+  padding:20px;
+  border-radius: 50px;
+  opacity:1;
+  position:relative;
+  height:auto;
+
+
+}
+.mod1 ul li a{
+color: black;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-height: 80px;
+  width: 100%;
+  background-color: gray; 
+  bottom: 0;
+  margin: 0;
+}
+
+footer ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  list-style: none;
+}
+
+
+footer ul li{
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  
+}
+
+footer ul li a{
+  text-decoration: none;
+  padding: 6px 15px;
+  margin: 30px;
+  color:white;
+  border-radius: 20px;
+   list-style: none;
+}
+
+footer ul li a:hover{
+  background:white ;
+  color:gray;
+  font-size: 23px;
+  transition: 0.5s ease;
+  text-decoration: none;
+  list-style: none;
+}
+
+.course-image {
+    max-width: 350px;
+    max-height: 300px;
+  }

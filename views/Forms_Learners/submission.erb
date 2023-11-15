@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Learner's Background</title>
+    <link rel="stylesheet" href="style/style.css">    
+  </head>
+  <body>
+    <% unless @submitted_text_field_value.nil? %>
+      <p>Thank You<strong> <br/>
+      To confirm what you have submitted <br/>
+      <%= h @submitted_text_field_value %>
+      </strong></p>
+    <% end %>
+  </body>
+</html>

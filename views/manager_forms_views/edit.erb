@@ -1,0 +1,34 @@
+<%= erb :"common/header" %>
+<h1> Edit Student </h1>
+<link rel="stylesheet" href="style/style.css" type="text/css">
+<% if @user.nil? %>
+
+    <p class="error"><strong>Unknown user</strong></p>
+
+<% else %>    
+
+    <% unless @user.errors.size.zero? %>
+        <% puts @user.errors.size %>
+        <p><strong class="error">Please correct the errors below:</strong></p>
+        <% @user.errors.each do |error| %>
+            <h3><%= h error %>
+        <% end %>
+    <% end %>
+
+    <form method="post">
+        <input type="hidden" name="id" value="<%= @user.id %>" />
+        <%= erb :"manager_forms_views/user_form" %>
+    </form>
+
+    <div class="warning">
+        <p><strong>WARNING! Deleting a record cannot be undone.</strong></p>
+
+        <form method="post" action="/delete">
+            <input type="hidden" name="id" value="<%= @user.id %>" />
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+
+<% end %>
+
+<p class="navigation">Return to <a href="/search">Student Search</a>.</p>

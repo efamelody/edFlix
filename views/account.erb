@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+</head>
+<body>
+<%= erb :"common/header" %>
+  
+  <p><%= @var %></p>
+  <% if !session[:username] %>
+  <!-- Display the login form if the user is not logged in -->
+  <div class="contact-container">
+    <h1>Login to EdFlix</h1>
+    <form action="/account" method="post">
+      <label>Username:</label>
+      <input type="text" name="username" style="width: 300px;"><br>
+      <label>Password:</label>
+      <input type="password" name="password" style="width: 300px;"><br>
+      <a href="/forgot_password">Forgot password?</a>
+     <button type="submit" style="width: 320px;">Log in</button>
+    </form>
+  </div>
+  <% else %>
+  <!-- Display the logout button if the user is logged in -->
+  <a href="/logout">Logout</a>
+  <% end %>
+
+ <%= erb :footer %>
+</body>
+</html>

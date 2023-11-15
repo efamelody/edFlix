@@ -1,0 +1,11 @@
+<% @subtitle = "Add Course" %>
+
+<% unless @course.errors.size.zero? %>
+    <p><strong class="error">Please correct the errors below:</strong></p>
+<% end %>
+
+<form method="post">
+    <%= erb :"administrator_form_views/course_form" %>
+</form>
+
+<p class="navigation">Return to <a href="/course_search">Course Search</a>.</p>

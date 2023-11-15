@@ -1,0 +1,12 @@
+<%= erb :"common/header" %>
+
+<h2>Comment Section</h2>
+    <form method="post"> 
+      <p>
+        User ID: <input type="text" name="userID" value="<%= h @comments.userID %>"/> <br/>
+        Course ID: <input type="text" name="courseID" value="<%= h @comments.courseID %>"/> <br/> 
+        Stars: <input type="integer" name="stars" value="<%= h @comments.stars %>"/>  <br/>
+        Comment : <input type="integer" name="comment" value="<%= h @comments.comment %>"/>  <br/>
+      </p>
+      <p><input type="submit" value="Post"></p>
+    </form>

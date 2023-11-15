@@ -1,0 +1,12 @@
+<% @subtitle = "Add Student" %>
+ <%= erb :"common/header" %>
+<% unless @user.errors.size.zero? %>
+    <p><strong class="error">Please correct the errors below:</strong></p>
+<% end %>
+
+<form method="post">
+    <%= erb :"manager_forms_views/user_form" %>
+</form>
+
+ 
+<p class="navigation">Return to <a href="/search">Student Search</a>.</p>

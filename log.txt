@@ -1,0 +1,37 @@
+# Logfile created on 2023-05-03 17:49:03 +0000 by logger.rb/66358
+I, [2023-05-03T17:56:35.986229 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/
+I, [2023-05-03T17:56:35.994984 #375]  INFO -- : 200
+I, [2023-05-03T17:56:39.268584 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/account
+I, [2023-05-03T17:56:39.270468 #375]  INFO -- : 200
+I, [2023-05-03T17:56:46.223079 #375]  INFO -- : POST https://gyrovacuum-nicepaper-4567.codio.io/account
+I, [2023-05-03T17:56:46.225569 #375]  INFO -- : 200
+I, [2023-05-03T17:56:52.867607 #375]  INFO -- : POST https://gyrovacuum-nicepaper-4567.codio.io/account
+I, [2023-05-03T17:56:52.868415 #375]  INFO -- : 303
+I, [2023-05-03T17:56:53.053638 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/
+I, [2023-05-03T17:56:53.055617 #375]  INFO -- : 200
+I, [2023-05-03T17:57:54.051955 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/account
+I, [2023-05-03T17:57:54.053724 #375]  INFO -- : 200
+I, [2023-05-03T17:57:56.042202 #375]  INFO -- : POST https://gyrovacuum-nicepaper-4567.codio.io/account
+I, [2023-05-03T17:57:56.044379 #375]  INFO -- : 200
+I, [2023-05-03T17:58:03.927824 #375]  INFO -- : POST https://gyrovacuum-nicepaper-4567.codio.io/account
+I, [2023-05-03T17:58:03.928665 #375]  INFO -- : 303
+I, [2023-05-03T17:58:04.041631 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/
+I, [2023-05-03T17:58:04.043558 #375]  INFO -- : 200
+I, [2023-05-03T17:58:34.044501 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/courses
+I, [2023-05-03T17:58:34.046460 #375]  INFO -- : 200
+I, [2023-05-03T17:58:34.215646 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/public_images/computerscience.jpg
+I, [2023-05-03T17:58:34.216249 #375]  INFO -- : 404
+I, [2023-05-03T17:58:34.616042 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/about
+I, [2023-05-03T17:58:34.617857 #375]  INFO -- : 200
+I, [2023-05-03T17:58:35.200727 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/courses
+I, [2023-05-03T17:58:35.202851 #375]  INFO -- : 200
+I, [2023-05-03T17:58:35.457961 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/public_images/computerscience.jpg
+I, [2023-05-03T17:58:35.458301 #375]  INFO -- : 404
+I, [2023-05-03T17:58:35.997900 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/
+I, [2023-05-03T17:58:35.999843 #375]  INFO -- : 200
+I, [2023-05-03T17:59:05.187282 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/contact
+I, [2023-05-03T17:59:05.191483 #375]  INFO -- : 200
+I, [2023-05-03T17:59:05.845834 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/about
+I, [2023-05-03T17:59:05.848139 #375]  INFO -- : 200
+I, [2023-05-03T17:59:06.367914 #375]  INFO -- : GET https://gyrovacuum-nicepaper-4567.codio.io/
+I, [2023-05-03T17:59:06.369966 #375]  INFO -- : 200

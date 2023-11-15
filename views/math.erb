@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<style>
+.mod2 {
+  background-color: lightgrey;
+  text-align: center;
+  margin-top: 20px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  height: auto;
+  width: 25%;
+}
+
+.mod2 h1{
+  font-size: 17px;
+}
+.mod2 h2{
+  font-size: 15px;
+}
+.mod2 h3{
+  font-size: 15px;
+}
+</style>
+<html>
+<head>
+  <title>EdFlix</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+</head>
+<main>
+  <%= erb :"common/header" %>
+  <main>
+  <div class= "modules">
+  <div class= "mod1">
+    <h2>Course Name: Introduction to Predicate Logic</h2>
+    <h3> Course Description</h3>
+    <p> Predicate logic is a formal system of logic that deals with the relations between objects in the world.
+        This course provides an introduction to predicate logic, including its syntax, semantics, and applications. Topics covered in the course include:</p>
+    <ul>
+    <li>Propositional logic review</li>
+    <li>Syntax and semantics of predicate logic</li>
+    <li>Quantifiers and variables</li>
+    <li>Logical equivalence and entailment</li>
+    <li>Models and interpretations</li>
+    <li>Predicate logic proof techniques</li>
+    </ul>
+    <p> By the end of this course, you will have a solid understanding of the fundamentals of predicate logic and be 
+        able to apply it to a range of problems in fields such as computer science, mathematics, and philosophy.</p>
+    <h3> Year Group:</h3>
+    <p> This course is available for first year students</p>
+    <p> This course is available for free</p>
+    <a href="/learner-form"><button> ENROLL </button></a>
+    <div class="mod2">
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 4 </h3>
+  <% if @comment_1.count > 0 %>
+    <% @comment_1.each do |comments| %>
+      <h1>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div> 
+  </div>
+   
+
+   <main>
+  <div class= "modules">
+  <div class= "mod1">
+    <h2>Course Name: Integration and Differentiation: Fundamentals and Applications</h2>
+    <h3> Course Description</h3>
+    <p>Calculus is one of the most powerful and widely used mathematical tools in science, engineering, economics,
+     and many other fields. Integration and differentiation are the two main branches of calculus,
+     and they form the basis for many important mathematical concepts.
+     In this course, you will learn the fundamentals of integration and differentiation, 
+     including their basic principles, techniques, and applications. We will cover topics such as limits, derivatives, 
+     integrals, and differential equations.
+     Through a series of lectures and problem-solving exercises, you will learn how to apply integration and 
+     differentiation to solve real-world problems.
+     By the end of this course, you will have a solid understanding of integration and differentiation and how 
+     to apply these techniques to solve complex problems in various fields.</p>
+     <p>By the end of this course, you will have a solid understanding of integration and differentiation and 
+        how to apply these techniques to solve complex problems in various fields.</p>
+    <ul>
+        <li>Introduction to Calculus</li>
+        <li>Techniques of Differentiation</li>
+        <li>Techniques of Integration</li>
+        <li>Differential Equations</li>
+    </ul>
+    <p> This course is available for all students</p>
+    <p> This course is available for free</p>
+    <a href="/learner-form"><button> ENROLL </button></a>
+        <div class = "mod2">
+  <h1>Comment Section</h1>
+  <h2><a href="/comment">Comment Here</a></h2>
+  <h3>Course ID: 4 </h3>
+  <% if @comment_1.count > 0 %>
+    <% @comment_1.each do |comments| %>
+      <h1>User<%= h comments.userID %></h1>
+      <h3>Stars:<%= h comments.stars %></h3>
+      <h3>Comments:<%= h comments.comment %></h3>
+    <% end %> 
+   <% end %>
+   </div>
+    </div>
+    </main>
+     <%= erb :footer %>
+     </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+  </head>
+  <body>
+    <%= erb :"common/header" %>
+    <main>
+      <% if @results && @results.any? %>
+        <h1>Search Results for "<%= params[:query] %>"</h1>
+        <ul>
+          <% @results.each do |result| %>
+            <li><%= result %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <h1>No Results Found</h1>
+        <p>Sorry, we couldn't find any results for "<%= params[:query] %>."</p>
+        <p>Please try a different search query.</p>
+      <% end %>
+    </main>
+  </body>
+   <%= erb :footer %>
+</html>

@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="style/style.css" type="text/css">
+
+<p class="label">Username</p>
+<p class="field"><input type="text" name="username" value="<%= h @user.username %>" /></p>
+<% if @user.errors.include?("username") %>
+  <% @user.errors["username"].each do |error| %>
+  <% end %>
+<% end %>
+
+
+<p class="label">Password</p>
+<p class="field"><input type="text" name="passwordHash" value="<%= h @user.passwordHash %>" /></p>
+<% if @user.errors.include?("passwordHash") %>
+  <% @user.errors["passwordHash"].each do |error| %>
+  <% end %>
+<% end %>
+
+
+<p class="label">Full Name</p>
+<p class="field"><input type="text" name="fullName" value="<%= h @user.fullName %>" /></p>
+<% if @user.errors.include?("fullName") %>
+  <% @user.errors["fullName"].each do |error| %>
+  <% end %>
+<% end %>
+
+
+<p class="label">Role</p>
+<p class="field"><input type="text" name="role" value="<%= h @user.role %>" /></p>
+<% if @user.errors.include?("role") %>
+  <% @user.errors["role"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Admin</p>
+<p class="field"><input type="text" name="admin" value="<%= h @user.admin %>" /></p>
+<% if @user.errors.include?("admin") %>
+  <% @user.errors["admin"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Degree</p>
+<p class="field"><input type="text" name="degree" value="<%= h @user.degree %>" /></p>
+<% if @user.errors.include?("degree") %>
+  <% @user.errors["degree"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Institution Code</p>
+<p class="field"><input type="text" name="institutionCode" value="<%= h @user.institutionCode %>" /></p>
+<% if @user.errors.include?("institutionCode") %>
+  <% @user.errors["institutionCode"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Suspended</p>
+<p class="field"><input type="text" name="suspended" value="<%= h @user.suspended %>" /></p>
+<% if @user.errors.include?("suspended") %>
+  <% @user.errors["suspended"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Reason</p>
+<p class="field"><input type="text" name="reason" value="<%= h @user.reason %>" /></p>
+<% if @user.errors.include?("reason") %>
+  <% @user.errors["reason"].each do |error| %>
+  <% end %>
+<% end %>
+
+<p class="label">Email</p>
+<p class="field"><input type="text" name="email" value="<%= h @user.email %>" /></p>
+<% if @user.errors.include?("email") %>
+  <% @user.errors["email"].each do |error| %>
+  <% end %>
+<% end %>
+
+
+<p class="submit"><input type="submit" value="Submit" /></p>
